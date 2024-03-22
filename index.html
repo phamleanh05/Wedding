@@ -46,15 +46,18 @@
             </a>
             <div class="navbar-nav mr-auto py-0">
                 <!-- <a href="#Gallery" class="nav-item nav-link">Gallery</a> -->
-                <a href="#family" class="nav-item nav-link">Bưng Quả</a>
-                <a href="#event" class="nav-item nav-link">Sự Kiện</a>
+                <a href="#gallery" class="nav-item nav-link">Gallery</a>
+                <a href="#location" class="nav-item nav-link">Địa Điểm</a>
                 <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
         </div>
     </nav>
     <!-- Navbar End -->
 
-
+    <!--Audio Start-->
+    <!-- <audio id="myAudio" loop="loop" src="/img/audio.mp3" type="audio/mp3"></audio>
+    <i class="fa fa-music pause"></i> -->
+    <!--Audio End-->
     <!-- Home Start -->
     <div class="container-fluid p-0 mb-5 pb-5" id="home">
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -67,25 +70,55 @@
                             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
                                 <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">We're getting married</h3>
                             </div>
-                            <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                            <audio id="myAudio" preload="auto">
+                                <source src="img/audio.mp3" type="audio/mp3">
+                            </audio>
+                            <button class="btn-play mx-auto" onclick="togglePlay()">
                                 <span></span>
                             </button>
+                            <script>
+                                var myAudio = document.getElementById("myAudio");
+                                var playButton = document.querySelector(".playButton");
+                                function togglePlay() {
+                                    if (myAudio.paused) {
+                                        myAudio.play();
+                                        playButton.textContent = "Pause";
+                                    } else {
+                                        myAudio.pause();
+                                        playButton.textContent = "Play";
+                                    }
+                                }
+                            </script>                        
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/home-back2.JPG" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100" src="img/home-back.JPG" style="object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Thế Anh & Đoàn Thúy</h1>
                             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
                                 <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">We're getting married</h3>
                             </div>
-                            <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                            <audio id="myAudio" preload="auto">
+                                <source src="img/audio.mp3" type="audio/mp3">
+                            </audio>
+                            <button class="btn-play mx-auto player" onclick="togglePlay()">
                                 <span></span>
                             </button>
+                            <script>
+                                var myAudio = document.getElementById("myAudio");
+                                var playButton = document.querySelector(".playButton");
+                                function togglePlay() {
+                                    if (myAudio.paused) {
+                                        myAudio.play();
+                                        playButton.textContent = "Pause";
+                                    } else {
+                                        myAudio.pause();
+                                        playButton.textContent = "Play";
+                                    }
+                                }
+                            </script>     
                         </div>
                     </div>
                 </div>
@@ -106,21 +139,21 @@
 
 
     <!-- Video Modal Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>        
-                    <!-- 16:9 aspect ratio -->
+                    
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Video Modal End -->
 
 
@@ -136,7 +169,7 @@
                 <div class="col-md-6 p-0 text-center text-md-right">
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
                         <h3 class="mb-3">Cô Dâu</h3>
-                        <p>We are getting married</p>
+                        <p>Bên cạnh anh, em tìm thấy ý nghĩa cuộc sống và hạnh phúc vô tận.</p>
                         <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-female text-primary pr-3"></i>Đoàn Thúy</h3>
                         <div class="position-relative">
                             <a class="btn btn-outline-primary btn-square mr-1" href="https://www.facebook.com/dtthuy.dtthuy"><i class="fab fa-facebook-f"></i></a>
@@ -155,11 +188,10 @@
                 <div class="col-md-6 p-0 text-center text-md-left">
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
                         <h3 class="mb-3">Chú Rể</h3>
-                        <p>She said yes</p>
+                        <p>Em là ánh sáng của cuộc đời anh, và từ ngày hôm nay, anh sẽ mãi mãi bảo vệ và yêu thương em.</p>
                         <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-male text-primary pr-3"></i>Thế Anh</h3>
                         <div class="position-relative">
                             <a class="btn btn-outline-primary btn-square mr-1" href="https://www.facebook.com/theanh.phamle.1/"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-linkedin-in"></i></a>
                             <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
@@ -187,6 +219,7 @@
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
                             <h4 class="mb-2">Lần Đầu Gặp Nhau</h4>
                             <p class="text-uppercase mb-2">Cuối năm 2014</p>
+                            <p class="text-uppercase mb-2">Ngay từ lần gặp đầu tiên, trái tim chúng ta đã biết rằng đây là điều đặc biệt.</p>
                         </div>
                     </div>
                 </div>
@@ -195,10 +228,11 @@
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
                             <h4 class="mb-2">Lần Đầu Hẹn Hò</h4>
                             <p class="text-uppercase mb-2">17 Tháng 1 2015</p>
+                            <p class="text-uppercase mb-2">Kỷ niệm ngày đầu tiên chúng ta hẹn hò vẫn ấm áp và ngọt ngào.</p>
                         </div>
                     </div>
                     <div class="col-md-6 text-center text-md-left">
-                        <img class="img-fluid ml-md-3" src="img/story-2.jpeg" alt="">
+                        <img class="img-fluid ml-md-3" src="img/story-2.jpeg" alt="" style="object-fit:cover;">
                     </div>
                 </div>
                 <div class="row">
@@ -209,6 +243,7 @@
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
                             <h4 class="mb-2">Chụp Hình Cưới</h4>
                             <p class="text-uppercase mb-2">06 Tháng 3 2024</p>
+                            <p class="text-uppercase mb-2">Bước khởi đầu cho một hành trình hạnh phúc trọn vẹn.</p>
                         </div>
                     </div>
                 </div>
@@ -230,7 +265,7 @@
 
 
     <!-- Gallery Start -->
-    <!-- <div class="container-fluid bg-gallery" id="gallery" style="padding: 120px 0; margin: 90px 0;">
+    <div class="container-fluid bg-gallery" id="gallery" style="padding: 120px 0; margin: 90px 0;">
         <div class="section-title position-relative text-center" style="margin-bottom: 120px;">
             <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>
             <h1 class="font-secondary display-4 text-white">Our Photo Gallery</h1>
@@ -238,47 +273,47 @@
         </div>
         <div class="owl-carousel gallery-carousel">
             <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-1.jpg" alt="">
-                <a href="img/gallery-1.jpg" data-lightbox="gallery">
+                <img class="img-fluid w-100" src="img/gallery/gallery-1.JPG" alt="">
+                <a href="img/gallery/gallery-1.JPG" data-lightbox="gallery">
                     <i class="fa fa-2x fa-plus text-white"></i>
                 </a>
             </div>
             <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-2.jpg" alt="">
-                <a href="img/gallery-2.jpg" data-lightbox="gallery">
+                <img class="img-fluid w-100" src="img/gallery/gallery-2.JPG" alt="">
+                <a href="img/gallery/gallery-2.JPG" data-lightbox="gallery">
                     <i class="fa fa-2x fa-plus text-white"></i>
                 </a>
             </div>
             <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-3.jpg" alt="">
-                <a href="img/gallery-3.jpg" data-lightbox="gallery">
+                <img class="img-fluid w-100" src="img/gallery/gallery-3.JPG" alt="">
+                <a href="img/gallery/gallery-3.JPG" data-lightbox="gallery">
                     <i class="fa fa-2x fa-plus text-white"></i>
                 </a>
             </div>
             <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-4.jpg" alt="">
-                <a href="img/gallery-4.jpg" data-lightbox="gallery">
+                <img class="img-fluid w-100" src="img/gallery/gallery-4.JPG" alt="">
+                <a href="img/gallery/gallery-4.JPG" data-lightbox="gallery">
                     <i class="fa fa-2x fa-plus text-white"></i>
                 </a>
             </div>
             <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-5.jpg" alt="">
-                <a href="img/gallery-5.jpg" data-lightbox="gallery">
+                <img class="img-fluid w-100" src="img/gallery/gallery-5.JPG" alt="">
+                <a href="img/gallery/gallery-5.JPG" data-lightbox="gallery">
                     <i class="fa fa-2x fa-plus text-white"></i>
                 </a>
             </div>
             <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-6.jpg" alt="">
-                <a href="img/gallery-6.jpg" data-lightbox="gallery">
+                <img class="img-fluid w-100" src="img/gallery/gallery-6.JPG" alt="">
+                <a href="img/gallery/gallery-6.JPG" data-lightbox="gallery">
                     <i class="fa fa-2x fa-plus text-white"></i>
                 </a>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- Gallery End -->
 
     <!-- Friends & Family Start -->
-    <div class="container-fluid py-5" id="family">
+    <!-- <div class="container-fluid py-5" id="family">
         <div class="container pt-5 pb-3">
             <div class="section-title position-relative text-center">
                 <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Friends & Family</h6>
@@ -466,27 +501,27 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Friends & Family End -->
 
     <!-- Event Start -->
-    <div class="container-fluid py-6" id="event">
+    <div class="container-fluid py-6" id="location">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Sự Kiện</h6>
-                <h1 class="font-secondary display-4">Our Wedding Event</h1>
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Địa Điểm</h6>
+                <h1 class="font-secondary display-4">Our Wedding Event Location</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
             <div class="container timeline position-relative p-0">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-right">
-                        <img class="img-fluid mr-md-3" src="img/Phaphoa.png" alt="">
+                        <img class="img-fluid mr-md-3" src="img/thuy.JPG" alt="" width="525">
                     </div>
                     <div class="col-md-6 text-center text-md-left">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
                             <h4 class="mb-3">Nhà Đoàn Thuý</h4>
-                            <p class="mb-2">140/39, Thạnh Xuân 22, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh</p>
-                            <p class="mb-0">3:00AM - 8:00AM</p>
+                            <p class="mb-2">140/39, Thạnh Xuân 22, Phường Thạnh Xuân, Q12, HCM</p>
+                            <p class="mb-0">Thời Gian: 3:00AM - 8:00AM</p>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.88611108836426!2d106.66920295218257!3d10.874079350647369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529d6942a69e5%3A0x8f0bc2389c713cd0!2zMTQwIFRo4bqhbmggWHXDom4gMjIsIFRo4bqhbmggWHXDom4sIFF14bqtbiAxMiwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oIDcwMDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1711013605445!5m2!1svi!2s" width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
@@ -495,24 +530,24 @@
                     <div class="col-md-6 text-center text-md-right">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
                             <h4 class="mb-3">Nhà Thế Anh</h4>
-                            <p class="mb-2">249, Trương Thị Hoa, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh</p>
-                            <p class="mb-0">6:00AM - 9:00PM</p>
+                            <p class="mb-2">249, Trương Thị Hoa, Phường Tân Thới Hiệp, Q12, HCM</p>
+                            <p class="mb-0">Thời Gian: 6:00AM - 9:00PM</p>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.291563364659!2d106.63877178542!3d10.865414329944171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529ee5688db29%3A0x2bc71dca2df8fec1!2zMjQ5IMSQLlRyxrDGoW5nIFRo4buLIEhvYSwgSGnhu4dwIFRow6BuaCwgUXXhuq1uIDEyLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2sus!4v1711013948414!5m2!1svi!2sus" width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                     <div class="col-md-6 text-center text-md-left">
-                        <img class="img-fluid ml-md-3" src="img/Phaphoa.png" alt="">
+                        <img class="img-fluid ml-md-3" src="img/theanh.JPG" alt="" width="525">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 text-center text-md-right">
-                        <img class="img-fluid mr-md-3" src="img/Phaphoa.png" alt="">
+                        <img class="img-fluid mr-md-3" src="img/Phaphoa.jpg" alt="" width="525">
                     </div>
                     <div class="col-md-6 text-center text-md-left">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
                             <h4 class="mb-3">Chùa Pháp Hoa</h4>
                             <p class="mb-2">870, Trường Sa, Quận 3, Hồ Chí Minh</p>
-                            <p class="mb-0">9:00AM - 2:00PM</p>
+                            <p class="mb-0">Thời Gian: 9:00AM - 2:00PM</p>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3254009601037!2d106.68137490369115!3d10.786370493504778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f2b920d7c0d%3A0xbdb1b9cbc90fa4be!2zQ2jDuWEgUGjDoXAgSG9h!5e0!3m2!1svi!2sus!4v1711014179261!5m2!1svi!2sus" width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
@@ -526,11 +561,11 @@
     <div class="container-fluid py-5" id="rsvp">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">RSVP</h6>
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Thank to</h6>
                 <h1 class="font-secondary display-4">Join Our Party</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
-            <div class="row justify-content-center">
+            <!-- <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="text-center">
                         <form>
@@ -569,6 +604,15 @@
                         </form>
                     </div>
                 </div>
+            </div> -->
+            <div class="thank-you-section">
+                <h2 class="font-secondary">Thank You</h2>
+                <p>Dear Family and Friends,</p>
+                <p>We are incredibly grateful for the love and support you have shown us as we begin this new chapter of our lives together. Your presence at our wedding meant the world to us, and we are deeply touched by your warm wishes, kind words, and thoughtful gifts.</p>
+                <p>We would like to express our heartfelt appreciation to our parents for their unconditional love, guidance, and unwavering support throughout the years. Your love has shaped us into the individuals we are today, and we are forever grateful.</p>
+                <p>To our family and friends, thank you for celebrating with us and for being a part of our special day. Your love and friendship mean more to us than words can express, and we look forward to sharing many more beautiful moments together.</p>
+                <p>With love and gratitude,</p>
+                <p>Thế Anh & Đoàn Thúy</p>
             </div>
         </div>
     </div>

@@ -30,19 +30,14 @@
 
     // Modal Video
     $(document).ready(function () {
-        var $videoSrc;
+        var $audioSrc;
         $('.btn-play').click(function () {
-            $videoSrc = $(this).data("src");
+            $audioSrc = $(this).data("src");
         });
-        console.log($videoSrc);
-
-        $('#videoModal').on('shown.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-        })
-
-        $('#videoModal').on('hide.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc);
-        })
+        function playAudio(src) {
+            var audio = new Audio(src);
+            audio.play();
+        }
     });
 
 
